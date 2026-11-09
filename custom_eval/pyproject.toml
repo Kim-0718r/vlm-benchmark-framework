@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vlm-custom-eval"
+version = "0.1.0"
+description = "Extensible evaluation framework for vision-language models"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=3.6,<4",
+    "Pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+qwen = [
+    "accelerate>=1.0",
+    "qwen-vl-utils>=0.0.14",
+    "transformers>=4.45,<6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

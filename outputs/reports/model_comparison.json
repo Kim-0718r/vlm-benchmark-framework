@@ -1,0 +1,746 @@
+{
+  "internvl2_5_2b": {
+    "textvqa": {
+      "saved_samples": 5000,
+      "scored_samples": 5000,
+      "errors": 0,
+      "average_latency_ms": 790.5640541001922,
+      "median_latency_ms": 857.0549499709159,
+      "max_peak_vram_mb": 5676.86669921875,
+      "accuracy": 0.75036
+    },
+    "chartqa": {
+      "saved_samples": 2500,
+      "scored_samples": 2500,
+      "errors": 0,
+      "average_latency_ms": 12085.38392016068,
+      "median_latency_ms": 996.9744000118226,
+      "max_peak_vram_mb": 5676.86669921875,
+      "overall": 0.7732,
+      "by_question_type": {
+        "augmented_test": 0.9264,
+        "human_test": 0.62
+      },
+      "count": 2500
+    },
+    "ocrbench": {
+      "saved_samples": 1000,
+      "scored_samples": 1000,
+      "errors": 0,
+      "average_latency_ms": 895.7997797004646,
+      "median_latency_ms": 912.1027500368655,
+      "max_peak_vram_mb": 5676.22412109375,
+      "points": 790.0,
+      "accuracy": 0.79,
+      "count": 1000,
+      "by_question_type": {
+        "Artistic Text Recognition": 43.0,
+        "Digit String Recognition": 46.0,
+        "Doc-oriented VQA": 132.0,
+        "Handwriting Recognition": 17.0,
+        "Handwritten Mathematical Expression Recognition": 77.0,
+        "Irregular Text Recognition": 46.0,
+        "Key Information Extraction": 161.0,
+        "Non-Semantic Text Recognition": 43.0,
+        "Regular Text Recognition": 49.0,
+        "Scene Text-centric VQA": 176.0
+      },
+      "by_dataset": {
+        "ChartQA": 47.0,
+        "ChartQA_Human": 31.0,
+        "ESTVQA": 44.0,
+        "FUNSD": 50.0,
+        "HME100k": 77.0,
+        "IAM": 17.0,
+        "IC13_857": 18.0,
+        "IC15_1811": 7.0,
+        "IIIT5K": 15.0,
+        "NonSemanticText": 43.0,
+        "ORAND": 46.0,
+        "POIE": 61.0,
+        "SROIE": 50.0,
+        "STVQA": 43.0,
+        "WordArt": 43.0,
+        "cocotext": 6.0,
+        "ct80": 9.0,
+        "ctw": 7.0,
+        "docVQA": 37.0,
+        "infographicVQA": 17.0,
+        "ocrVQA": 47.0,
+        "svt": 16.0,
+        "svtp": 9.0,
+        "textVQA": 42.0,
+        "totaltext": 8.0
+      }
+    },
+    "mme": {
+      "saved_samples": 2374,
+      "scored_samples": 2374,
+      "errors": 0,
+      "average_latency_ms": 680.8732556863829,
+      "median_latency_ms": 585.1848499733023,
+      "max_peak_vram_mb": 5670.84912109375,
+      "categories": {
+        "code_reasoning": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 85.0,
+          "accuracy_plus": 70.0,
+          "mme_score": 155.0
+        },
+        "artwork": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 84.0,
+          "accuracy_plus": 72.5,
+          "mme_score": 156.5
+        },
+        "celebrity": {
+          "count": 340,
+          "complete_pairs": 170,
+          "accuracy": 82.6470588235294,
+          "accuracy_plus": 65.29411764705883,
+          "mme_score": 147.94117647058823
+        },
+        "numerical_calculation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 50.0,
+          "accuracy_plus": 10.0,
+          "mme_score": 60.0
+        },
+        "text_translation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 95.0,
+          "accuracy_plus": 90.0,
+          "mme_score": 185.0
+        },
+        "count": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 85.0,
+          "accuracy_plus": 73.33333333333333,
+          "mme_score": 158.33333333333331
+        },
+        "color": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 90.0,
+          "accuracy_plus": 80.0,
+          "mme_score": 170.0
+        },
+        "commonsense_reasoning": {
+          "count": 140,
+          "complete_pairs": 70,
+          "accuracy": 65.0,
+          "accuracy_plus": 41.42857142857143,
+          "mme_score": 106.42857142857143
+        },
+        "position": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 81.66666666666667,
+          "accuracy_plus": 66.66666666666667,
+          "mme_score": 148.33333333333334
+        },
+        "OCR": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 95.0,
+          "accuracy_plus": 90.0,
+          "mme_score": 185.0
+        },
+        "landmark": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 84.5,
+          "accuracy_plus": 70.0,
+          "mme_score": 154.5
+        },
+        "scene": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 84.5,
+          "accuracy_plus": 70.5,
+          "mme_score": 155.0
+        },
+        "existence": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 98.33333333333333,
+          "accuracy_plus": 96.66666666666667,
+          "mme_score": 195.0
+        },
+        "posters": {
+          "count": 294,
+          "complete_pairs": 147,
+          "accuracy": 80.95238095238095,
+          "accuracy_plus": 63.265306122448976,
+          "mme_score": 144.21768707482994
+        }
+      },
+      "perception_score": 1614.8255302120847,
+      "cognition_score": 506.42857142857144,
+      "total_score": 2121.2541016406562
+    }
+  },
+  "openflamingo_3b_langinstruct": {
+    "textvqa": {
+      "saved_samples": 5000,
+      "scored_samples": 5000,
+      "errors": 0,
+      "average_latency_ms": 1427.3836241194424,
+      "median_latency_ms": 846.0822000342887,
+      "max_peak_vram_mb": 4953.4599609375,
+      "accuracy": 0.10384000000000002
+    },
+    "chartqa": {
+      "saved_samples": 2500,
+      "scored_samples": 2500,
+      "errors": 0,
+      "average_latency_ms": 1421.6975830394076,
+      "median_latency_ms": 1010.2438000030816,
+      "max_peak_vram_mb": 4959.9765625,
+      "overall": 0.0204,
+      "by_question_type": {
+        "augmented_test": 0.0152,
+        "human_test": 0.0256
+      },
+      "count": 2500
+    },
+    "ocrbench": {
+      "saved_samples": 1000,
+      "scored_samples": 1000,
+      "errors": 0,
+      "average_latency_ms": 989.5287303997902,
+      "median_latency_ms": 682.0518999884371,
+      "max_peak_vram_mb": 4959.37255859375,
+      "points": 143.0,
+      "accuracy": 0.143,
+      "count": 1000,
+      "by_question_type": {
+        "Artistic Text Recognition": 16.0,
+        "Digit String Recognition": 0.0,
+        "Doc-oriented VQA": 19.0,
+        "Handwriting Recognition": 6.0,
+        "Handwritten Mathematical Expression Recognition": 0.0,
+        "Irregular Text Recognition": 19.0,
+        "Key Information Extraction": 0.0,
+        "Non-Semantic Text Recognition": 0.0,
+        "Regular Text Recognition": 11.0,
+        "Scene Text-centric VQA": 72.0
+      },
+      "by_dataset": {
+        "ChartQA": 2.0,
+        "ChartQA_Human": 4.0,
+        "ESTVQA": 23.0,
+        "FUNSD": 0.0,
+        "HME100k": 0.0,
+        "IAM": 6.0,
+        "IC13_857": 2.0,
+        "IC15_1811": 4.0,
+        "IIIT5K": 4.0,
+        "NonSemanticText": 0.0,
+        "ORAND": 0.0,
+        "POIE": 0.0,
+        "SROIE": 0.0,
+        "STVQA": 13.0,
+        "WordArt": 16.0,
+        "cocotext": 3.0,
+        "ct80": 2.0,
+        "ctw": 1.0,
+        "docVQA": 2.0,
+        "infographicVQA": 11.0,
+        "ocrVQA": 21.0,
+        "svt": 5.0,
+        "svtp": 5.0,
+        "textVQA": 15.0,
+        "totaltext": 4.0
+      }
+    },
+    "mme": {
+      "saved_samples": 2374,
+      "scored_samples": 2374,
+      "errors": 0,
+      "average_latency_ms": 1051.5309182816973,
+      "median_latency_ms": 812.413400009973,
+      "max_peak_vram_mb": 4959.11328125,
+      "categories": {
+        "code_reasoning": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 7.5,
+          "accuracy_plus": 0.0,
+          "mme_score": 7.5
+        },
+        "artwork": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 45.75,
+          "accuracy_plus": 1.0,
+          "mme_score": 46.75
+        },
+        "celebrity": {
+          "count": 340,
+          "complete_pairs": 170,
+          "accuracy": 18.823529411764707,
+          "accuracy_plus": 4.705882352941177,
+          "mme_score": 23.529411764705884
+        },
+        "numerical_calculation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 40.0,
+          "accuracy_plus": 0.0,
+          "mme_score": 40.0
+        },
+        "text_translation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 12.5,
+          "accuracy_plus": 0.0,
+          "mme_score": 12.5
+        },
+        "count": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 23.333333333333332,
+          "accuracy_plus": 0.0,
+          "mme_score": 23.333333333333332
+        },
+        "color": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 21.666666666666668,
+          "accuracy_plus": 6.666666666666667,
+          "mme_score": 28.333333333333336
+        },
+        "commonsense_reasoning": {
+          "count": 140,
+          "complete_pairs": 70,
+          "accuracy": 32.857142857142854,
+          "accuracy_plus": 0.0,
+          "mme_score": 32.857142857142854
+        },
+        "position": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 30.0,
+          "accuracy_plus": 0.0,
+          "mme_score": 30.0
+        },
+        "OCR": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 42.5,
+          "accuracy_plus": 5.0,
+          "mme_score": 47.5
+        },
+        "landmark": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 40.0,
+          "accuracy_plus": 3.5,
+          "mme_score": 43.5
+        },
+        "scene": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 28.5,
+          "accuracy_plus": 0.5,
+          "mme_score": 29.0
+        },
+        "existence": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 31.666666666666668,
+          "accuracy_plus": 10.0,
+          "mme_score": 41.66666666666667
+        },
+        "posters": {
+          "count": 294,
+          "complete_pairs": 147,
+          "accuracy": 18.707482993197278,
+          "accuracy_plus": 2.7210884353741496,
+          "mme_score": 21.428571428571427
+        }
+      },
+      "perception_score": 335.0413165266107,
+      "cognition_score": 92.85714285714286,
+      "total_score": 427.89845938375356
+    }
+  },
+  "qwen2vl_2b": {
+    "textvqa": {
+      "saved_samples": 5000,
+      "scored_samples": 5000,
+      "errors": 0,
+      "average_latency_ms": 384.21432562030384,
+      "median_latency_ms": 357.7281500038225,
+      "max_peak_vram_mb": 4322.9345703125,
+      "accuracy": 0.74958
+    },
+    "chartqa": {
+      "saved_samples": 2500,
+      "scored_samples": 2500,
+      "errors": 0,
+      "average_latency_ms": 364.0718492398504,
+      "median_latency_ms": 370.84254997898825,
+      "max_peak_vram_mb": 4322.22705078125,
+      "overall": 0.7572,
+      "by_question_type": {
+        "augmented_test": 0.9192,
+        "human_test": 0.5952
+      },
+      "count": 2500
+    },
+    "ocrbench": {
+      "saved_samples": 1000,
+      "scored_samples": 1000,
+      "errors": 0,
+      "average_latency_ms": 404.6671329009114,
+      "median_latency_ms": 318.83095001103356,
+      "max_peak_vram_mb": 4322.9345703125,
+      "points": 736.0,
+      "accuracy": 0.736,
+      "count": 1000,
+      "by_question_type": {
+        "Artistic Text Recognition": 44.0,
+        "Digit String Recognition": 31.0,
+        "Doc-oriented VQA": 134.0,
+        "Handwriting Recognition": 38.0,
+        "Handwritten Mathematical Expression Recognition": 0.0,
+        "Irregular Text Recognition": 47.0,
+        "Key Information Extraction": 170.0,
+        "Non-Semantic Text Recognition": 49.0,
+        "Regular Text Recognition": 49.0,
+        "Scene Text-centric VQA": 174.0
+      },
+      "by_dataset": {
+        "ChartQA": 48.0,
+        "ChartQA_Human": 28.0,
+        "ESTVQA": 46.0,
+        "FUNSD": 52.0,
+        "HME100k": 0.0,
+        "IAM": 38.0,
+        "IC13_857": 18.0,
+        "IC15_1811": 7.0,
+        "IIIT5K": 14.0,
+        "NonSemanticText": 49.0,
+        "ORAND": 31.0,
+        "POIE": 63.0,
+        "SROIE": 55.0,
+        "STVQA": 40.0,
+        "WordArt": 44.0,
+        "cocotext": 6.0,
+        "ct80": 9.0,
+        "ctw": 8.0,
+        "docVQA": 36.0,
+        "infographicVQA": 22.0,
+        "ocrVQA": 47.0,
+        "svt": 17.0,
+        "svtp": 9.0,
+        "textVQA": 41.0,
+        "totaltext": 8.0
+      }
+    },
+    "mme": {
+      "saved_samples": 2374,
+      "scored_samples": 2374,
+      "errors": 0,
+      "average_latency_ms": 272.77829376569235,
+      "median_latency_ms": 287.0747500273865,
+      "max_peak_vram_mb": 4322.93505859375,
+      "categories": {
+        "code_reasoning": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 62.5,
+          "accuracy_plus": 35.0,
+          "mme_score": 97.5
+        },
+        "artwork": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 79.25,
+          "accuracy_plus": 63.5,
+          "mme_score": 142.75
+        },
+        "celebrity": {
+          "count": 340,
+          "complete_pairs": 170,
+          "accuracy": 78.52941176470588,
+          "accuracy_plus": 58.8235294117647,
+          "mme_score": 137.35294117647058
+        },
+        "numerical_calculation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 47.5,
+          "accuracy_plus": 10.0,
+          "mme_score": 57.5
+        },
+        "text_translation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 92.5,
+          "accuracy_plus": 85.0,
+          "mme_score": 177.5
+        },
+        "count": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 81.66666666666667,
+          "accuracy_plus": 63.333333333333336,
+          "mme_score": 145.0
+        },
+        "color": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 96.66666666666667,
+          "accuracy_plus": 93.33333333333333,
+          "mme_score": 190.0
+        },
+        "commonsense_reasoning": {
+          "count": 140,
+          "complete_pairs": 70,
+          "accuracy": 69.28571428571429,
+          "accuracy_plus": 42.857142857142854,
+          "mme_score": 112.14285714285714
+        },
+        "position": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 85.0,
+          "accuracy_plus": 73.33333333333333,
+          "mme_score": 158.33333333333331
+        },
+        "OCR": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 60.0,
+          "accuracy_plus": 20.0,
+          "mme_score": 80.0
+        },
+        "landmark": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 92.75,
+          "accuracy_plus": 86.0,
+          "mme_score": 178.75
+        },
+        "scene": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 84.75,
+          "accuracy_plus": 69.5,
+          "mme_score": 154.25
+        },
+        "existence": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 100.0,
+          "accuracy_plus": 100.0,
+          "mme_score": 200.0
+        },
+        "posters": {
+          "count": 294,
+          "complete_pairs": 147,
+          "accuracy": 88.43537414965986,
+          "accuracy_plus": 78.2312925170068,
+          "mme_score": 166.66666666666669
+        }
+      },
+      "perception_score": 1553.1029411764705,
+      "cognition_score": 444.6428571428571,
+      "total_score": 1997.7457983193276
+    }
+  },
+  "smolvlm2_2_2b": {
+    "textvqa": {
+      "saved_samples": 5000,
+      "scored_samples": 5000,
+      "errors": 0,
+      "average_latency_ms": 844.0235036200153,
+      "median_latency_ms": 809.5463000008749,
+      "max_peak_vram_mb": 4741.87060546875,
+      "accuracy": 0.7167399999999999
+    },
+    "chartqa": {
+      "saved_samples": 2500,
+      "scored_samples": 2500,
+      "errors": 0,
+      "average_latency_ms": 737.7256614400176,
+      "median_latency_ms": 727.8803999997763,
+      "max_peak_vram_mb": 4746.79931640625,
+      "overall": 0.288,
+      "by_question_type": {
+        "augmented_test": 0.3512,
+        "human_test": 0.2248
+      },
+      "count": 2500
+    },
+    "ocrbench": {
+      "saved_samples": 1000,
+      "scored_samples": 1000,
+      "errors": 0,
+      "average_latency_ms": 717.8712706999358,
+      "median_latency_ms": 701.286199999231,
+      "max_peak_vram_mb": 4747.78466796875,
+      "points": 720.0,
+      "accuracy": 0.72,
+      "count": 1000,
+      "by_question_type": {
+        "Artistic Text Recognition": 46.0,
+        "Digit String Recognition": 47.0,
+        "Doc-oriented VQA": 117.0,
+        "Handwriting Recognition": 34.0,
+        "Handwritten Mathematical Expression Recognition": 34.0,
+        "Irregular Text Recognition": 45.0,
+        "Key Information Extraction": 138.0,
+        "Non-Semantic Text Recognition": 41.0,
+        "Regular Text Recognition": 47.0,
+        "Scene Text-centric VQA": 171.0
+      },
+      "by_dataset": {
+        "ChartQA": 46.0,
+        "ChartQA_Human": 23.0,
+        "ESTVQA": 44.0,
+        "FUNSD": 50.0,
+        "HME100k": 34.0,
+        "IAM": 34.0,
+        "IC13_857": 17.0,
+        "IC15_1811": 7.0,
+        "IIIT5K": 14.0,
+        "NonSemanticText": 41.0,
+        "ORAND": 47.0,
+        "POIE": 43.0,
+        "SROIE": 45.0,
+        "STVQA": 42.0,
+        "WordArt": 46.0,
+        "cocotext": 6.0,
+        "ct80": 9.0,
+        "ctw": 7.0,
+        "docVQA": 31.0,
+        "infographicVQA": 17.0,
+        "ocrVQA": 48.0,
+        "svt": 16.0,
+        "svtp": 9.0,
+        "textVQA": 37.0,
+        "totaltext": 7.0
+      }
+    },
+    "mme": {
+      "saved_samples": 2374,
+      "scored_samples": 2374,
+      "errors": 0,
+      "average_latency_ms": 665.4985628896735,
+      "median_latency_ms": 641.3497499997902,
+      "max_peak_vram_mb": 4745.07275390625,
+      "categories": {
+        "code_reasoning": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 52.5,
+          "accuracy_plus": 15.0,
+          "mme_score": 67.5
+        },
+        "artwork": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 72.75,
+          "accuracy_plus": 51.0,
+          "mme_score": 123.75
+        },
+        "celebrity": {
+          "count": 340,
+          "complete_pairs": 170,
+          "accuracy": 59.11764705882353,
+          "accuracy_plus": 29.41176470588235,
+          "mme_score": 88.52941176470588
+        },
+        "numerical_calculation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 57.5,
+          "accuracy_plus": 20.0,
+          "mme_score": 77.5
+        },
+        "text_translation": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 50.0,
+          "accuracy_plus": 0.0,
+          "mme_score": 50.0
+        },
+        "count": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 78.33333333333333,
+          "accuracy_plus": 63.333333333333336,
+          "mme_score": 141.66666666666666
+        },
+        "color": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 93.33333333333333,
+          "accuracy_plus": 86.66666666666667,
+          "mme_score": 180.0
+        },
+        "commonsense_reasoning": {
+          "count": 140,
+          "complete_pairs": 70,
+          "accuracy": 67.85714285714286,
+          "accuracy_plus": 42.857142857142854,
+          "mme_score": 110.71428571428572
+        },
+        "position": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 71.66666666666667,
+          "accuracy_plus": 46.666666666666664,
+          "mme_score": 118.33333333333334
+        },
+        "OCR": {
+          "count": 40,
+          "complete_pairs": 20,
+          "accuracy": 87.5,
+          "accuracy_plus": 75.0,
+          "mme_score": 162.5
+        },
+        "landmark": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 85.25,
+          "accuracy_plus": 71.5,
+          "mme_score": 156.75
+        },
+        "scene": {
+          "count": 400,
+          "complete_pairs": 200,
+          "accuracy": 84.75,
+          "accuracy_plus": 69.5,
+          "mme_score": 154.25
+        },
+        "existence": {
+          "count": 60,
+          "complete_pairs": 30,
+          "accuracy": 98.33333333333333,
+          "accuracy_plus": 96.66666666666667,
+          "mme_score": 195.0
+        },
+        "posters": {
+          "count": 294,
+          "complete_pairs": 147,
+          "accuracy": 80.27210884353741,
+          "accuracy_plus": 65.3061224489796,
+          "mme_score": 145.578231292517
+        }
+      },
+      "perception_score": 1466.3576430572227,
+      "cognition_score": 305.7142857142857,
+      "total_score": 1772.0719287715085
+    }
+  }
+}

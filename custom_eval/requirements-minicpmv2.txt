@@ -1,0 +1,10 @@
+Pillow==10.1.0
+timm==0.9.10
+transformers==4.36.0
+sentencepiece==0.1.99
+peft==0.7.1
+accelerate==0.34.2
+datasets==3.6.0
+pyarrow==18.1.0
+pandas>=2.2, <3
+numpy==1.26.4

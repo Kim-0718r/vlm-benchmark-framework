@@ -1,0 +1,13 @@
+# InternVL2.5-2B inference dependencies for Windows / Python 3.11.
+# Install PyTorch and torchvision separately from the official CUDA wheel index.
+transformers==4.37.2
+accelerate==0.34.2
+timm==0.9.12
+sentencepiece==0.1.99
+einops==0.6.1
+einops-exts==0.0.4
+numpy==1.26.4
+Pillow>=10,<13
+datasets==3.6.0
+pyarrow==18.1.0
+pandas>=2.2, <3

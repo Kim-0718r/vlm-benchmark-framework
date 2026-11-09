@@ -1,0 +1,65 @@
+# Python virtual environments (several of these are multiple GB each)
+.venv/
+.venv-*/
+venv/
+env/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.pytest-tmp*/
+.tmp-pytest*/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Editors and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Downloaded model weights and caches
+.cache/
+cache/
+huggingface/
+/models/
+/checkpoints/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Local datasets and temporary work
+data/
+tmp/
+results/
+*.log
+
+# Per-sample benchmark predictions are reproducible and unnecessarily large.
+# Keep only the compact final comparison reports in Git.
+outputs/**
+!outputs/reports/
+!outputs/reports/model_comparison.csv
+!outputs/reports/model_comparison.json
+!outputs/reports/model_comparison.md
+
+# Older smoke-test and generated report directories
+custom_eval/outputs/
+output/
