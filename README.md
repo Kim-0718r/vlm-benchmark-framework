@@ -1,27 +1,116 @@
-# VLM 벤치마크 실험 프레임워크
+<div align="center">
 
-이 프로젝트는 서로 다른 Vision-Language Model(VLM)을 동일한 데이터와 채점 방식으로 비교하기 위한 개인 실험 프레임워크다.
+# 🔬 VLM Benchmark Lab
 
-최종 실험 보고서는 [VLM 추론 결과 보고서_김동현.hwp](docs/VLM%20추론%20결과%20보고서_김동현.hwp)에서 확인할 수 있다. 개별 문항의 원본 추론 결과는 용량과 재현 가능성을 고려해 Git 저장소에서 제외하고, `outputs/reports`의 요약 결과만 공개한다.
+### 여러 Vision-Language Model을 하나의 평가 파이프라인에서 비교하는 실험 프레임워크
 
-현재 공통으로 실행하는 벤치마크는 다음 네 가지다.
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-CUDA-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+![Tests](https://img.shields.io/badge/tests-50%20passed-brightgreen)
+![Benchmarks](https://img.shields.io/badge/benchmarks-4-6C63FF)
+![Adapters](https://img.shields.io/badge/model%20adapters-5-00A98F)
 
-| 벤치마크 | 전체 문항 | 주로 확인하는 능력 |
-|---|---:|---|
-| TextVQA | 5,000 | 자연 이미지 안의 문자 이해 및 질의응답 |
-| ChartQA | 2,500 | 차트·그래프 이해와 수치 추론 |
-| OCRBench | 1,000 | 장면 문자, 문서, 수식 등의 OCR 능력 |
-| MME | 2,374 | 인지 및 추론 능력 |
+[📄 최종 보고서](docs/VLM%20추론%20결과%20보고서_김동현.hwp) ·
+[📊 결과 CSV](outputs/reports/model_comparison.csv) ·
+[🧾 결과 Markdown](outputs/reports/model_comparison.md)
+
+</div>
+
+---
+
+이 프로젝트는 서로 다른 Vision-Language Model(VLM)을 **동일한 데이터 로더, 채점 방식, 저장 형식**으로 비교하기 위해 만든 개인 실험 프레임워크다. 모델별 라이브러리와 입력 형식은 전용 어댑터가 처리하며, 추론이 중단되어도 저장된 문항 다음부터 이어서 실행할 수 있다.
+
+개별 문항의 원본 추론 결과와 모델 가중치는 용량 및 재현 가능성을 고려해 Git 저장소에서 제외하고, 코드·테스트·요약 결과·최종 보고서만 공개한다.
+
+## ✨ 핵심 기능
+
+| 기능 | 설명 |
+|---|---|
+| 🔌 모델 어댑터 | 서로 다른 모델 API와 프롬프트 형식을 공통 인터페이스로 변환 |
+| 🧪 공통 벤치마크 | TextVQA, ChartQA, OCRBench, MME를 동일한 실행기로 평가 |
+| 💾 중단 후 재개 | 문항별 JSONL 저장을 사용해 완료된 추론을 건너뛰고 재개 |
+| ⚖️ 비교 프로필 | 모델 권장 설정을 유지하는 `native`와 입력량을 제한하는 `controlled` 지원 |
+| 📈 자동 리포트 | 모델별 정확도·점수·지연시간·VRAM을 Markdown, CSV, JSON으로 생성 |
+| ✅ 자동 테스트 | 스키마, 로더, 채점기, 저장소, 모델 어댑터를 포함한 50개 테스트 |
+
+## 🧩 지원 범위
+
+### 모델
+
+| 실행 키 | 모델 | 전용 환경 | 상태 |
+|---|---|---|---|
+| `qwen2vl_2b` | Qwen2-VL-2B-Instruct | `.venv-custom-eval` | 전체 평가 완료 |
+| `internvl2_5_2b` | InternVL2.5-2B | `.venv-internvl` | 전체 평가 완료 |
+| `smolvlm2_2_2b` | SmolVLM2-2.2B-Instruct | `.venv-smolvlm` | 전체 평가 완료 |
+| `openflamingo_3b_langinstruct` | OpenFlamingo-3B | `.venv-openflamingo` | 전체 평가 완료 |
+| `minicpm_v_2` | MiniCPM-V-2 | `.venv-minicpmv2` | 파일럿 완료 |
+
+### 벤치마크
+
+| 벤치마크 | 문항 수 | 평가 능력 | 주요 지표 |
+|---|---:|---|---|
+| TextVQA | 5,000 | 자연 이미지 속 문자 이해와 질의응답 | VQA accuracy |
+| ChartQA | 2,500 | 차트·그래프 이해와 수치 추론 | Relaxed accuracy |
+| OCRBench | 1,000 | 장면 문자, 문서, 수식 등의 OCR | Points / 1,000 |
+| MME | 2,374 | 지각 및 인지 추론 | Score / 2,800 |
+
+## 📈 최근 Native 실험 결과
+
+| 모델 | TextVQA | ChartQA | OCRBench | MME |
+|---|---:|---:|---:|---:|
+| InternVL2.5-2B | **75.04%** | **77.32%** | **790 / 1,000** | **75.76%** |
+| Qwen2-VL-2B-Instruct | 74.96% | 75.72% | 736 / 1,000 | 71.35% |
+| SmolVLM2-2.2B-Instruct | 71.67% | 28.80% | 720 / 1,000 | 63.29% |
+| OpenFlamingo-3B | 10.38% | 2.04% | 143 / 1,000 | 15.28% |
+
+> MME는 원점수를 2,800점 만점 기준 백분율로 변환했다. Native 프로필은 각 모델의 권장 이미지 전처리를 유지하므로, 정확도 비교에는 유용하지만 지연시간을 완전히 동일한 입력 조건으로 비교한 결과는 아니다. 세부 조건과 해석은 [최종 보고서](docs/VLM%20추론%20결과%20보고서_김동현.hwp)를 참고한다.
+
+## 🚀 빠른 시작
+
+Python 3.11 환경을 만든 뒤 CUDA용 PyTorch와 공통 패키지를 설치한다. 아래 예시는 Qwen2-VL 환경이다.
+
+```powershell
+py -3.11 -m venv .venv-custom-eval
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv-custom-eval\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+python -m pip install -e ".\custom_eval[qwen]"
+```
+
+먼저 각 벤치마크에서 10문항만 실행해 전체 흐름을 확인한다.
+
+```powershell
+python .\custom_eval\scripts\run_all_benchmarks.py `
+  --model qwen2vl_2b `
+  --profile native `
+  --limit 10
+```
+
+파일럿이 성공하면 `--limit 10`을 제거해 전체 벤치마크를 실행한다. 같은 명령을 다시 실행하면 이미 저장된 문항을 건너뛰고 이어서 처리한다.
+
+## 🔄 평가 파이프라인
+
+```text
+Hugging Face Dataset
+        ↓
+Benchmark Loader → EvalSample
+        ↓
+Model Adapter → ModelOutput
+        ↓
+Benchmark Scorer
+        ↓
+JSONL 저장 → 비교 보고서 생성
+```
+
+---
 
 ## 1. 프로젝트 구조
 
 ```text
 vlm_experiment/
-├─ .venv-custom-eval/       # Qwen2-VL 및 공통 개발 환경
-├─ .venv-openflamingo/      # OpenFlamingo 전용 환경
-├─ .venv-internvl/          # InternVL 전용 환경
-├─ .venv-smolvlm/           # SmolVLM2 전용 환경
-├─ .venv-minicpmv2/         # MiniCPM-V-2 전용 환경
+├─ docs/
+│  └─ VLM 추론 결과 보고서_김동현.hwp
 ├─ custom_eval/
 │  ├─ requirements-*.txt    # 모델별 의존성
 │  ├─ scripts/
@@ -37,9 +126,10 @@ vlm_experiment/
 │  │  ├─ runner.py          # 추론 반복 실행
 │  │  └─ reporting.py       # 비교 보고서 생성
 │  └─ tests/                # 자동 테스트
-└─ outputs/
-   ├─ <benchmark>/<model>/predictions.jsonl
-   └─ reports/model_comparison.{md,csv,json}
+├─ outputs/
+│  └─ reports/              # 공개용 요약 결과
+├─ .gitignore
+└─ README.md
 ```
 
 모델마다 별도의 가상환경을 사용하는 이유는 모델별로 요구하는 PyTorch와 Transformers 버전이 다르기 때문이다. GPU와 NVIDIA 드라이버는 컴퓨터 전체에서 공유하지만, CUDA 지원 PyTorch와 Python 라이브러리는 가상환경마다 별도로 설치한다.
